@@ -15,7 +15,6 @@ Py.test functionalities used in project:
 - fixtures,
 - fixtures parametrization.
 
-
 ## Installation
 
 - Clone this repository to your computer using link:
@@ -30,12 +29,10 @@ Py.test functionalities used in project:
   cd to the directory where requirements.txt is located.
   activate your virtualenv.
   run: pip install -r requirements.txt in your shell.
-``
-`
+```
 ## Usage
 
 To run tests you need to run [twitter_test](https://github.com/Sonny-skyez/Py.test_-_Twitter_with_unittests/blob/master/twitter_test.py) with py.test command in your venv.
-
 
 ## Built With
 
