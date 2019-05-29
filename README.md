@@ -32,7 +32,7 @@ Py.test functionalities used in project:
 ```
 ## Usage
 
-To run tests you need to run [twitter_test](https://github.com/Sonny-skyez/Py.test_-_Twitter_with_unittests/blob/master/twitter_test.py) with py.test command in your venv.
+To run tests you need to run [twitter_test](https://github.com/Sonny-skyez/Py.test_-_Twitter_with_unittests/blob/master/twitter_test.py) with **py.test** command in your venv.
 
 ## Built With
 
