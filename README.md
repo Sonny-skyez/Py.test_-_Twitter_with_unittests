@@ -15,6 +15,9 @@ Py.test functionalities used in project:
 - fixtures,
 - fixtures parametrization.
 
+Also in project:
+- sending request to GitHub API.
+
 ## Installation
 
 - Clone this repository to your computer using link:
