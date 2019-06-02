@@ -6,21 +6,12 @@ class Twitter(object):
     def __init__(self, backend=None):
         self.backend = backend
         self._tweets = []
-        if self.backend and not os.path.exists(self.backend):
-            with open(self.backend, 'w'):
-                pass
-
-
-    def delete(self):
-        if self.backend:
-            os.remove(self.backend)
 
 
     @property
     def tweets(self):
         if self.backend and not self._tweets:
-            with open(self.backend) as twitter_file:
-                self._tweets = [line.rstrip('\n') for line in twitter_file]
+                self._tweets = [line.rstrip('\n') for line in self.backend.readlines()]
         return self._tweets
 
 
@@ -29,8 +20,7 @@ class Twitter(object):
             raise Exception('Message too long.')
         self.tweets.append(message)
         if self.backend:
-            with open(self.backend, 'w') as twitter_file:
-                twitter_file.write('\n'.join(self.tweets))
+            self.backend.write('\n'.join(self.tweets))
 
 
 
