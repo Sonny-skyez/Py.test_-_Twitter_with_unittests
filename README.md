@@ -1,12 +1,13 @@
 # Py.test - Twitter with unittests
 
 Project contains simple Twitter clone script with functionalities as: writing/reading tweet, findng hashtags,
-writing tweets to backend .txt file.
-Main part of this project - test, are testing:
+writing tweets to backend .txt file. Project uses **Given, Then, When** metodology.
+Main part of this project - tests, are testing:
 
 - script initialization,
 - tweeting messages,
 - lenght of massages,
+- two twitter classes initialization,
 - finding tweets with hashtags.
 
 Py.test functionalities used in project:
@@ -14,6 +15,7 @@ Py.test functionalities used in project:
 - unit test parametrization,
 - fixtures,
 - fixtures parametrization.
+- fixtures autouse in many tests,
 
 ## Installation
 
