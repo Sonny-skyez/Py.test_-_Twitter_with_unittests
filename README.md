@@ -8,6 +8,7 @@ Main part of this project - tests, are testing:
 - tweeting messages,
 - tweeting with given username,
 - lenght of massages < 160,
+- twitter verion,
 - finding tweets with hashtags.
 
 Py.test functionalities used in project:
@@ -16,11 +17,12 @@ Py.test functionalities used in project:
 - fixtures,
 - fixtures parametrization.
 - fixtures autouse in many tests,
-- monkeypatch and mocking functions
+- monkeypatch
 
 Also in project:
 - sending request to GitHub API,
-- mocking twitter functions with Monkeypatch
+- mocking twitter functions with Monkeypatch,
+- usage of Mock and MagicMock unittest methods.
 
 ## Installation
 
