@@ -1,4 +1,4 @@
-from unittest.mock import patch
+from unittest.mock import patch, Mock
 from twitter import Twitter
 import pytest
 import requests
@@ -78,5 +78,18 @@ def test_tweet_with_username(avatar_mock, twitter):
         pytest.skip()
 
     twitter.tweet('Test message')
-    assert twitter.tweets == [{'message': 'Test message', 'avatar': 'test'}]
+    assert twitter.tweets == [{
+        'message': 'Test message',
+        'avatar': 'test',
+        'hashtags': []
+    }]
     avatar_mock.assert_called()
+
+
+@patch.object(requests, 'get', return_value = ResponseGetMock())
+def test_tweet_with_hashtag_mock(avatar_mock, twitter):
+    twitter.find_hashtags = Mock()
+    twitter.find_hashtags.return_value = ['first']
+    twitter.tweet('Test #second')
+    assert twitter.tweets[0]['hashtags'] == ['first']
+    twitter.find_hashtags.assert_called_with('Test #second')

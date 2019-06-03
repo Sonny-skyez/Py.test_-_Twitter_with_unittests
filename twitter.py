@@ -6,7 +6,7 @@ USERS_API = "https://api.github.com/users/"
 
 
 class Twitter(object):
-
+    version = '1.0'
 
     def __init__(self, backend=None, username = None):
         self.backend = backend
@@ -43,10 +43,11 @@ class Twitter(object):
             raise Exception('Message too long.')
         self.tweets.append({
             'message': message,
-            'avatar': self.get_user_avatar()})
+            'avatar': self.get_user_avatar(),
+            'hashtags': self.find_hashtags(message)
+        })
         if self.backend:
             self.backend.write(json.dumps(self.tweets))
-
 
 
     def find_hashtags(self, message):
