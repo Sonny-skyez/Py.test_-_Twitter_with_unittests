@@ -1,4 +1,4 @@
-from unittest.mock import patch, Mock
+from unittest.mock import patch, Mock, MagicMock
 from twitter import Twitter
 import pytest
 import requests
@@ -93,3 +93,9 @@ def test_tweet_with_hashtag_mock(avatar_mock, twitter):
     twitter.tweet('Test #second')
     assert twitter.tweets[0]['hashtags'] == ['first']
     twitter.find_hashtags.assert_called_with('Test #second')
+
+
+def test_twitter_version(twitter):
+    twitter.version = MagicMock()
+    twitter.version.__eq__.return_value = '2.0'
+    assert twitter.version == '2.0'
