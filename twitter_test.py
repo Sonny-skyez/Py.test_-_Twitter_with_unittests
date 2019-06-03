@@ -26,7 +26,7 @@ def username(request):
 
 
 @pytest.fixture(params = ['list', 'backend'], name='twitter')
-def fixture_twitter(backend,username, request, monkeypatch):
+def fixture_twitter(backend, username, request, monkeypatch):
     if request.param == 'list':
         twitter = Twitter(username = username)
     elif request.param == 'backend':
@@ -38,10 +38,10 @@ def test_twitter_initialization(twitter):
     assert twitter
 
 
-def test_tweet_single_message(twitter):
-    with patch.object(Twitter, 'get_user_avatar', return_value = 'test'):
-        twitter.tweet('Test message')
-        assert twitter.tweet_messages == ['Test message']
+@patch.object(Twitter, 'get_user_avatar', return_value = 'test')
+def test_tweet_single_message(avatar_mock, twitter):
+    twitter.tweet('Test message')
+    assert twitter.tweet_messages == ['Test message']
 
 
 def test_tweet_long_message(twitter):
@@ -71,9 +71,11 @@ def test_tweet_with_hashtag(twitter, message, expected):
     assert twitter.find_hashtags(message) == expected
 
 
-def test_tweet_with_username(twitter):
+@patch.object(Twitter, 'get_user_avatar', return_value = 'test')
+def test_tweet_with_username(avatar_mock, twitter):
     if not twitter.username:
         pytest.skip()
 
     twitter.tweet('Test message')
     assert twitter.tweets == [{'message': 'Test message', 'avatar': 'test'}]
+    avatar_mock.assert_called()
