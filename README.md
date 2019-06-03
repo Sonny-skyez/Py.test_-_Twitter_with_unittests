@@ -4,10 +4,10 @@ Project contains simple Twitter clone script with functionalities as: writing/re
 writing tweets to backend .txt file. Project uses **Given, Then, When** metodology.
 Main part of this project - tests, are testing:
 
-- script initialization,
+- initialization (2 twitter classes),
 - tweeting messages,
-- lenght of massages,
-- two twitter classes initialization,
+- tweeting with given username,
+- lenght of massages < 160,
 - finding tweets with hashtags.
 
 Py.test functionalities used in project:
@@ -16,9 +16,11 @@ Py.test functionalities used in project:
 - fixtures,
 - fixtures parametrization.
 - fixtures autouse in many tests,
+- monkeypatch and mocking functions
 
 Also in project:
-- sending request to GitHub API.
+- sending request to GitHub API,
+- mocking twitter functions with Monkeypatch
 
 ## Installation
 

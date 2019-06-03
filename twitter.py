@@ -1,7 +1,5 @@
-import re
+import re, json, requests
 from urllib.parse import urljoin
-import requests
-import json
 
 
 USERS_API = "https://api.github.com/users/"
