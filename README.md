@@ -17,8 +17,10 @@ Py.test functionalities used in project:
 - fixtures,
 - fixtures parametrization.
 - fixtures autouse in many tests,
-- monkeypatch
-- test coverage with annotations.
+- monkeypatch,
+- test coverage with annotations,
+- marking tests - skip, xfail etc.
+
 
 Also in project:
 - sending request to GitHub API,

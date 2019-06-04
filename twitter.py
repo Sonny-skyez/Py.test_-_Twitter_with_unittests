@@ -2,9 +2,6 @@ import re, json, requests
 from urllib.parse import urljoin
 
 
-#TODO requirements.txt
-
-
 USERS_API = "https://api.github.com/users/"
 
 
@@ -55,7 +52,7 @@ class Twitter(object):
 
 
     def find_hashtags(self, message):
-        return [m.lower() for m in re.findall('#(\w+)', message)]
+        return [m.lower() for m in re.findall(r'#(\w+)', message)]
 
 
     def get_all_hashtags(self):
