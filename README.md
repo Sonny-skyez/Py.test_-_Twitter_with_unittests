@@ -24,7 +24,8 @@ Also in project:
 - sending request to GitHub API,
 - mocking twitter functions with Monkeypatch,
 - usage of Mock and MagicMock unittest methods,
-- usage of conftest.py file.
+- usage of conftest.py file,
+- debugging with pdb and wdb (wdb.server).
 
 ## Installation
 
