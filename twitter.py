@@ -58,7 +58,7 @@ class Twitter(object):
         hashtags = []
         for message in self.tweets:
             hashtags.extend(message['hashtags'])
-            if hashtags:
-                return set(hashtags)
+        if hashtags:
+            return set(hashtags)
 
-            return 'No hashtags found'
+        return 'No hashtags found'

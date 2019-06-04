@@ -87,3 +87,11 @@ def test_twitter_version(twitter):
     twitter.version = MagicMock()
     twitter.version.__eq__.return_value = '2.0'
     assert twitter.version == '2.0'
+
+
+@patch.object(requests, 'get', return_value = ResponseGetMock())
+def test_twitter_get_all_hashtags(avatar_mock, twitter):
+    twitter.tweet('Test #first')
+    twitter.tweet('Test #first #second')
+    twitter.tweet('Test #third')
+    assert twitter.get_all_hashtags() == {'first','second','third'}
