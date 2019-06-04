@@ -47,12 +47,36 @@ Also in project:
 ## Usage
 
 To run tests you need to run [twitter_test](https://github.com/Sonny-skyez/Py.test_-_Twitter_with_unittests/blob/master/twitter_test.py) with **py.test** command in your venv.
+The result of running 53 tests will look like this:
+
+![alt text](https://github.com/Sonny-skyez/Py.test_-_Twitter_with_unittests/blob/master/tests_session.jpg?raw=true)
+
+## Coverage
+
+This project runs 53 test on twitter.py file testing it's functionalities. It has [100% code coverage - link](https://github.com/Sonny-skyez/Py.test_-_Twitter_with_unittests/blob/master/twitter.py%2Ccover)
+```
+Note:
+
+> class Twitter(object):
+>   version = '1.0'
+  
+>   def __init__(self, backend=None, username = None):
+>       self.backend = backend
+>       self._tweets = []
+>       self.username = username
+
+The '>' symbol means, that the line of code is covered by tests.
+```
+
+
 
 ## Built With
 
 - [Pycharm](https://www.jetbrains.com/pycharm/) - Python IDE for developers
 - [Python 3.7](https://www.python.org/downloads/release/python-370/) - coding language
-- [Pytest](https://docs.pytest.org/en/latest/) - Python test library
+- [Pytest](https://docs.pytest.org/en/latest/) - Python test framework
+- [unittest](https://docs.python.org/3/library/unittest.html) - Python test standard framework (Mock, MagicMock methods)
+- [wdb - web debugger](https://github.com/Kozea/wdb) - powerful debugging tool
 
 ## Contributing
 
@@ -60,7 +84,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## Author
 
-**Krzysztof Brymer** - script author [GitHub profile](https://github.com/Sonny-skyez)
+**Krzysztof Brymer** - script author [GitHub profile](https://github.com/Sonny-skyez), [Linkedin profile](https://www.linkedin.com/in/krzysztof-brymer/)
 
 ## License
 
