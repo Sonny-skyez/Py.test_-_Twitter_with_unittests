@@ -6,7 +6,7 @@ Main part of this project - tests, are testing:
 
 - initialization (2 twitter classes),
 - tweeting messages,
-- tweeting with given username,
+- tweeting with/without given username and backend,
 - lenght of massages < 160,
 - twitter verion,
 - finding all hashtags in tweets.
