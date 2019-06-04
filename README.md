@@ -51,9 +51,12 @@ The result of running 53 tests will look like this:
 
 ![alt text](https://github.com/Sonny-skyez/Py.test_-_Twitter_with_unittests/blob/master/tests_session.jpg?raw=true)
 
-## Coverage
+## Test coverage
 
 This project runs 53 test on twitter.py file testing it's functionalities. It has [100% code coverage - link](https://github.com/Sonny-skyez/Py.test_-_Twitter_with_unittests/blob/master/twitter.py%2Ccover)
+
+![alt text](https://github.com/Sonny-skyez/Py.test_-_Twitter_with_unittests/blob/master/coverage.jpg?raw=true)
+
 ```
 Note:
 
