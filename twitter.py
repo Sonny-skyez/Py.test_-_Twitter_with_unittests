@@ -2,6 +2,9 @@ import re, json, requests
 from urllib.parse import urljoin
 
 
+#TODO requirements.txt
+
+
 USERS_API = "https://api.github.com/users/"
 
 

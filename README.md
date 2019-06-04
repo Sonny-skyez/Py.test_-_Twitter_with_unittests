@@ -9,7 +9,7 @@ Main part of this project - tests, are testing:
 - tweeting with given username,
 - lenght of massages < 160,
 - twitter verion,
-- finding tweets with hashtags.
+- finding all hashtags in tweets.
 
 Py.test functionalities used in project:
 
@@ -18,6 +18,7 @@ Py.test functionalities used in project:
 - fixtures parametrization.
 - fixtures autouse in many tests,
 - monkeypatch
+- test coverage with annotations.
 
 Also in project:
 - sending request to GitHub API,
