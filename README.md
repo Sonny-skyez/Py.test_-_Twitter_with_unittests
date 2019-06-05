@@ -23,7 +23,7 @@ Py.test functionalities used in project:
 
 
 Also in project:
-- sending request to GitHub API,
+- sending request to external API,
 - mocking twitter functions with Monkeypatch,
 - usage of Mock and MagicMock unittest methods,
 - usage of conftest.py file,
